@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check a number is prime number</title>
+</head>
+<body>
+        <input type="text" id="number">
+        <button onclick=checkPrime()>Submit</button>
+        <script>
+            function checkPrime() {
+                let check = document.getElementById("number").value;
+                check = parseInt(check);
+                let isPrime, value;
+
+                if(check === 2 || check === 3) {
+                    isPrime = true
+                }
+
+                for(let i = 2; i < check; i++) {
+                    isPrime = true;
+                    if(check % i === 0) {
+                        isPrime = false;
+                        value = i;
+                        break;
+                    }
+                }
+
+                if(isPrime === true) {
+                    alert(check + " is a prime number!");
+                } else {
+                    alert(check + " is not a prime number! as it is also a multiple of " + value);
+                }
+            }
+        </script>
+</body>
+</html>
