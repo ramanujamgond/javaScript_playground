@@ -1,17 +1,17 @@
 // Pattern print in javascript in console
-let star = "";
+// let star = "";
 
 // ******* STAR PATTERN: 1 *******/
 
-for(let i = 0; i < 10; i++) {
-    for(let j = 10; j > i; j--) {
-        star += " ";
-    }
-    for(let k = 0; k <= i; k++ ) {
-        star += "*";
-    }
-}
-console.log(star)
+// for(let i = 0; i < 10; i++) {
+//     for(let j = 10; j > i; j--) {
+//         star += " ";
+//     }
+//     for(let k = 0; k <= i; k++ ) {
+//         star += "*";
+//     }
+// }
+// console.log(star)
 
 //******* STAR PATTERN: 2 *******/
 
@@ -69,3 +69,13 @@ console.log(star)
 //     star += "\n";
 // }
 // console.log(star);
+
+// Return function is javascript
+
+var multiply = multiplicationFunction(4, 18);
+
+function multiplicationFunction(value1, value2) {
+    return value1 * value2;
+}
+
+console.log("Multiplication Value is ", multiply);
