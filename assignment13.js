@@ -26,3 +26,13 @@ const filterPrice = price.filter(function(price){
 });
 
 console.log("Price", filterPrice);
+
+// Reduce() method
+
+const weeklyExpenses = [200, 350, 1500, 5000, 450, 680, 350];
+
+const resultData = weeklyExpenses.reduce(function(first, last){
+    return first + last;
+});
+
+console.log("Result Data", resultData);
