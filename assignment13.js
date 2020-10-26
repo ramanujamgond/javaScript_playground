@@ -36,3 +36,13 @@ const resultData = weeklyExpenses.reduce(function(first, last){
 });
 
 console.log("Result Data", resultData);
+
+// Every() method
+
+const age = [15, 20, 19];
+
+const personAge = age.every(function(person){
+    return person > 18;
+});
+
+console.log("Persona Age", personAge);
