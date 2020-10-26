@@ -16,3 +16,13 @@ productPriceList.map(function(item) {
 });
 
 console.log("Product Price List", productPriceList);
+
+// Filter() method
+
+const price = [25, 30, 15, 55, 40, 10];
+
+const filterPrice = price.filter(function(price){
+    return price >= 30;
+});
+
+console.log("Price", filterPrice);
