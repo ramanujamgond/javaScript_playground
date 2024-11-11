@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="second-button" onclick="secondButton()">9b</button>
+
+    <p></p>
+
+    <button onclick="buttonPress('heads')">heads</button>
+    <button onclick="buttonPress('tails')">tails</button>
+    <p class="show-selection"></p>
+
+    <input
+      placeholder="enter the name"
+      class="first-input"
+      onkeydown="showTheName(event)"
+    /><button onclick="onSubmit()">Submit</button>
+
+    <p class="your-name"></p>
+
+    <input placeholder="Enter the cost" class="js-input-value" />
+    <button onclick="calculate()">Calculate</button>
+    <p class="cost-value"></p>
+
+    <input
+      placeholder="Enter String"
+      class="input-envent-test"
+      onkeyup="handleOnKeyUp()"
+    />
+    <p class="onKeyUp"></p>
+
+    <script>
+      const button = document.querySelector("button");
+      console.log(button);
+
+      function secondButton() {
+        document.querySelector(".second-button").innerText = "9b done!";
+      }
+
+      function buttonPress(selectedValue) {
+        document.querySelector(
+          ".show-selection"
+        ).innerText = `You chose: ${selectedValue}`;
+      }
+
+      function showTheName(event) {
+        if (event.key === "Enter") {
+          onSubmit();
+        }
+      }
+
+      function onSubmit() {
+        const textValue = document.querySelector(".first-input");
+        let text = textValue.value;
+        document.querySelector(
+          ".your-name"
+        ).innerText = `Your name is: ${text}`;
+      }
+
+      function calculate() {
+        const inputElement = document.querySelector(".js-input-value");
+        let cost = Number(inputElement.value) * 100;
+
+        if (cost < 4000) {
+          cost += 1000;
+        }
+        document.querySelector(".cost-value").innerHTML = `${cost / 100}`;
+      }
+
+      function handleOnKeyUp() {
+        let inputValue = document.querySelector(".input-envent-test").value;
+        document.querySelector(".onKeyUp").innerHTML = `${inputValue}`;
+      }
+    </script>
+  </body>
+</html>
