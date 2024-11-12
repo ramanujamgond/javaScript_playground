@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class List</title>
+  </head>
+  <body>
+    <button class="js-button">Test</button>
+
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+
+      const buttonClass = buttonElement.classList.contains("js-button");
+
+      if (buttonClass) {
+        console.log(buttonClass);
+      }
+    </script>
+  </body>
+</html>
