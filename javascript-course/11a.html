@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11a Exercise</title>
+  </head>
+  <body>
+    <script>
+      const nums = [10, 20, 30];
+      nums[2] = 99;
+      console.log(nums);
+
+      function getLastValue(array) {
+        return array[array.length - 1];
+      }
+
+      console.log(getLastValue(nums));
+      console.log(getLastValue([1, 29, 22, 24, 5]));
+      console.log(getLastValue(["hi", "hello", "good"]));
+
+      function arraySwap(array) {
+        let firstValue = array[array.length - 1];
+        let lastValue = array[0];
+        array[0] = firstValue;
+        array[array.length - 1] = lastValue;
+        return array;
+      }
+
+      console.log(arraySwap([1, 20, 22, 24, 5]));
+      console.log(arraySwap(["hi", "hello", "good"]));
+    </script>
+  </body>
+</html>
